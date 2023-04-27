@@ -1,0 +1,48 @@
+
+.button {
+	width: 120px;
+	height: 40px;
+
+	background-color: var(--purple);
+	border-radius: 10px;
+	border: none;
+
+	color: var(--light);
+	font-size: 12pt;
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	text-shadow: 0 0 5px #ffffff35;
+
+	transition: all 0.5s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.button:hover {
+	background-color: var(--dark-purple);
+	cursor: pointer;
+}
+
+.ripples {
+	background-color: var(--white);
+	transform: translate(-50%, -50%);
+
+	pointer-events: none;
+	border-radius: 50%;
+
+	animation: ripple 0.7s linear infinite;
+	position: absolute;
+}
+
+@keyframes ripple {
+	0% {
+		width: 0;
+		height: 0;
+		opacity: 0.5;
+	}
+	100% {
+		width: 250px;
+		height: 250px;
+		opacity: 0;
+	}
+}
